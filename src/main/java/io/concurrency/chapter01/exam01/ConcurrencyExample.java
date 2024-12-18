@@ -6,8 +6,8 @@ import java.util.List;
 public class ConcurrencyExample {
     public static void main(String[] args) {
 
-        int cpuCores = Runtime.getRuntime().availableProcessors() * 2;
-//        int cpuCores = 13;
+//        int cpuCores = Runtime.getRuntime().availableProcessors() * 2;
+        int cpuCores = 13;
 
         // CPU 개수를 초과하는 데이터를 생성
         List<Integer> data = new ArrayList<>();
