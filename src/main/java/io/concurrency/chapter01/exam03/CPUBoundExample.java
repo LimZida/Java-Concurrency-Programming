@@ -6,7 +6,13 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
+/*
+* CPU Bound - 영상처리, AI 작업 관련
+*
+* 멀티코어의 병렬성을 이용한다.
+*
+* CPU 수 >= 스레드 개수
+* */
 public class CPUBoundExample {
     public static void main(String[] args) throws InterruptedException {
 
