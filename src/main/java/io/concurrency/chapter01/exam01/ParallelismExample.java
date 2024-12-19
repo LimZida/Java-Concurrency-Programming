@@ -22,15 +22,20 @@ public class ParallelismExample {
 
         /*
         * 병렬스트림 진행 (CPU를 전부 사용해서 각각 작업을 하나씩 물기)
+        *
+        * 분할정복을 이용하는 forkJoinPool 사용
         * */
-//        long sum1 = data.parallelStream()
+        long sum1 = data.parallelStream()
         /*
         * 일반스트림 진행 (CPU를 하나만 사용해서 작업을 진행)
+        *
+        * 순차 작업 진행
         * */
-        long sum1 = data.stream()
+//        long sum1 = data.stream()
                 .mapToLong(i -> {
                     try {
                         Thread.sleep(500);
+                        System.out.println(i + ": " + Thread.currentThread().getName());
                     } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
